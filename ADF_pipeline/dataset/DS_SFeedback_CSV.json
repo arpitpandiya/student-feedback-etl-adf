@@ -1,0 +1,41 @@
+{
+    "name": "DS_SFeedback_CSV",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "LS_ADLS",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "feedback_jan.csv",
+                "fileSystem": "mycontainer"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+        },
+        "schema": [
+            {
+                "name": "StudentID",
+                "type": "String"
+            },
+            {
+                "name": "Course",
+                "type": "String"
+            },
+            {
+                "name": "Rating",
+                "type": "String"
+            },
+            {
+                "name": "Comments",
+                "type": "String"
+            }
+        ]
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
