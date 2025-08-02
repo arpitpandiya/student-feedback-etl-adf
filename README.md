@@ -12,10 +12,29 @@ filter the data using **Mapping Data Flow** (`rating >= 4`), and load the transf
 
 ## 📁 Project Structure
 
-- `pipeline/`: JSON exports of ADF pipeline and data flow
-- `sample_data/`: Sample feedback CSV file
-- `sql/`: Table schema + sample SQL queries
-- `screenshots/`: Visuals of pipeline run and results
+student-feedback-etl-adf/
+│
+├── pipeline/     
+│   └── student_feedback_pipeline.json    
+├── datasets/
+|   └── DS_SFeedback_CSV
+|   └── DS_Sfeedback_SQL
+├── LinkedServices/
+│   └── LS_ADLS
+│   └── LS_ASQL
+|
+├── data/
+│   └── feedback_sample.csv                     
+│
+├── sql/
+│   └── schema.sql              
+│
+├── images/
+│   ├── adf_pipeline_flow.png           
+│   ├── dataflow_pipeline.png                     
+│   └── pipeline_runs_successfully.png     
+|
+├── Readme.md
 
 ## 🔄 ETL Flow
 
